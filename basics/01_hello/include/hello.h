@@ -5,7 +5,9 @@
 
 class Greeter {
 public:
+    // avoid implicit conversion to string
     explicit Greeter(std::string name);
+    //use const to ensure that the method does not modify the object
     void greet() const;
 
 private:
