@@ -1,4 +1,4 @@
-// 02_variables: 变量、数据类型、类型推断
+// 02_variables: variables, data types, type deduction
 
 #include <iostream>
 #include <string>
@@ -17,18 +17,18 @@ int main() {
     std::cout << "char:   " << c << " sizeof = " << sizeof(c) << "\n";
     std::cout << "bool:   " << std::boolalpha << d << " sizeof = " << sizeof(d) << "\n";
 
-    // 常量：const vs constexpr
-    const int MAX = 100;          // 运行时常量
-    constexpr int SIZE = 256;     // 编译期常量（推荐）
+    // const vs constexpr
+    const int MAX = 100;          // runtime constant
+    constexpr int SIZE = 256;     // compile constant (recommended)
     std::cout << "\nconst MAX = " << MAX << ", constexpr SIZE = " << SIZE << "\n";
 
-    // 引用：别名，不可改变指向
+    // Reference: alias, cannot change the object it points to
     int val = 10;
     int& ref = val;
     ref = 20;
     std::cout << "ref after assign: val = " << val << "\n";  // 20
 
-    // C++11: auto 类型推断
+    // C++11: auto type deduction
     auto x = 100;
     auto y = 2.718;
     auto s = std::string{"C++17"};
@@ -42,7 +42,7 @@ int main() {
     auto [num, name] = p;
     std::cout << "\nstructured binding: " << num << " = " << name << "\n";
 
-    // C++17: if 初始化语句（限制变量作用域）
+    // C++17: if statement with initializer
     std::vector<int> vec = {1, 2, 3, 4, 5};
     if (auto it = std::find(vec.begin(), vec.end(), 3); it != vec.end()) {
         std::cout << "found: " << *it << "\n";
