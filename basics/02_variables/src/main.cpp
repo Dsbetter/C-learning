@@ -1,19 +1,21 @@
 // 02_variables: 变量、数据类型、类型推断
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 int main() {
-    // 基本类型
+    // Basic types
     int    a = 42;
     double b = 3.14;
     char   c = 'A';
     bool   d = true;
 
-    std::cout << "int:    " << a << "\n";
-    std::cout << "double: " << b << "\n";
-    std::cout << "char:   " << c << "\n";
-    std::cout << "bool:   " << std::boolalpha << d << "\n";
+    std::cout << "int:    " << a << " sizeof = " << sizeof(a) << "\n";
+    std::cout << "double: " << b << " sizeof = " << sizeof(b) << "\n";
+    std::cout << "char:   " << c << " sizeof = " << sizeof(c) << "\n";
+    std::cout << "bool:   " << std::boolalpha << d << " sizeof = " << sizeof(d) << "\n";
 
     // 常量：const vs constexpr
     const int MAX = 100;          // 运行时常量
